@@ -19,7 +19,7 @@ header {
   align-items: center;
   justify-content: space-between;
   background-color: #333;
-  padding: 10px;
+  padding:15px;
   color: #fff;
 }
 
@@ -32,14 +32,25 @@ header p {
 }
 
 .site-title {
-  font-size: 2em; /* Tamaño grande para el título */
-  margin: 0; /* Elimina el margen por defecto */
+  font-size: 12; /* Tamaño grande para el título */
+  margin: 0;
+  float: left;
+  width: 80%; /* Elimina el margen por defecto */
 }
 
 .subtitle {
-  font-size: 1em; /* Tamaño más pequeño para el subtítulo */
-  margin-top: 0.5em; /* Espacio entre el título y el subtítulo */
-  color: #666; /* Color más suave para el subtítulo */
+  font-size: 12; /* Tamaño más pequeño para el subtítulo */
+  margin-top: 2; /* Espacio entre el título y el subtítulo */
+  color: #666;
+  padding: 20px;
+  float: left;
+  width: 20%; /* Color más suave para el subtítulo */
+}
+
+@media screen and (max-width: 800px) {
+  .site-title, .subtitle {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
 }
 
 /* Estilos del logo */
@@ -76,12 +87,12 @@ header p {
 }
 
 .main .content h2 {
-  margin-bottom: 20px;
+  margin-bottom: 1%;
 }
 
 .main .content p {
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1;
 }
 
 /* Estilos del carrusel */
@@ -96,7 +107,7 @@ header p {
 .carousel {
   display: flex;
   width: 300%;
-  animation: slide 12s infinite;
+  animation: slide 50s infinite;
 }
 
 .carousel-item {
@@ -142,7 +153,6 @@ footer .redes-sociales a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap; /* Permite que el contenido se ajuste cuando sea necesario */
   background-color: #333;
   padding: 10px;
   color: #fff;
@@ -155,23 +165,8 @@ footer .redes-sociales a:hover {
 
 .header-container .tagline {
   font-size: 1.2em;
-  text-align: center;
-  margin-top: 5px;
+  text-align: right;
+  margin-top: 1%;
 }
 
-/* Media query para pantallas pequeñas */
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .header-container h1 {
-    margin-bottom: 10px;
-  }
-
-  .header-container .tagline {
-    font-size: 1em;
-    margin-top: 10px;
-  }
-}

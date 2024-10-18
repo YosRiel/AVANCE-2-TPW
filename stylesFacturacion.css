@@ -13,8 +13,9 @@ body {
 }
 
 /* Estilos del encabezado */
-.header-container {
+header {
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: space-between;
   background-color: #333;
@@ -22,15 +23,52 @@ body {
   color: #fff;
 }
 
-.header-container h1 {
+header h1, header h2 {
+  color: #fff;
   margin: 0;
-  font-size: 1.8em;
 }
 
-.header-container .tagline {
-  font-size: 1.2em;
-  text-align: center;
-  margin-top: 5px;
+header p {
+  margin: 0;
+}
+
+.site-title {
+  font-size: 2em; /* Tamaño grande para el título */
+  margin: 0; /* Elimina el margen por defecto */
+}
+
+.subtitle {
+  font-size: 1em; /* Tamaño más pequeño para el subtítulo */
+  margin-top: 0.5em; /* Espacio entre el título y el subtítulo */
+  color: #666; /* Color más suave para el subtítulo */
+}
+
+/* Estilos del logo */
+.nav-logo img {
+  width: 80px;
+}
+
+/* Estilos de los botones de navegación */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #333;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: 2px solid #ccc; /* Marco alrededor de los botones */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #555;
+  border-color: #999;
 }
 
 /* Estilos de la barra de navegación */
@@ -59,6 +97,7 @@ body {
 /* Estilos del contenido principal */
 h1, h2 {
   color: #333; /* Color de los encabezados */
+  display:flex;
 }
 
 h2 {
