@@ -1,0 +1,221 @@
+/* Estilo general del cuerpo de la página */
+    body {
+        font-family: Arial, sans-serif; /* Define la fuente general de la página */
+        margin: 0; /* Elimina el margen exterior del cuerpo */
+        padding: 0; /* Elimina el espaciado interno del cuerpo */
+    }
+
+    /* Estilo de la barra de navegación */
+    nav {
+        background-color: #2c2c2c; /* Color de fondo negro oscuro */
+        color: #fff; /* Color del texto blanco */
+        padding: 10px 0; /* Espaciado vertical en la barra de navegación */
+        display: flex; /* Utiliza Flexbox para alinear elementos */
+        justify-content: center; /* Centra los elementos horizontalmente */
+        align-items: center; /* Centra los elementos verticalmente */
+        gap: 20px; /* Espacio entre elementos de navegación */
+    }
+
+    /* Estilo del logo de la barra de navegación */
+    .nav-logo {
+        margin-right: auto; /* Empuja el logo hacia el borde izquierdo */
+    }
+
+    .nav-logo img {
+        width: 80px; /* Ancho fijo del logo */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+
+    /* Estilo de los enlaces de navegación */
+    .nav-links {
+        display: flex; /* Utiliza Flexbox para alinear enlaces */
+        gap: 20px; /* Espacio entre enlaces */
+    }
+
+    nav a {
+        color: #fff; /* Color del texto de los enlaces en blanco */
+        text-decoration: none; /* Elimina el subrayado de los enlaces */
+        font-weight: bold; /* Hace que el texto de los enlaces esté en negrita */
+    }
+
+    nav a:hover {
+        text-decoration: underline; /* Subraya los enlaces al pasar el ratón */
+    }
+
+    /* Estilo del contenedor principal */
+    .container {
+        max-width: 1200px; /* Ancho máximo del contenedor */
+        margin: 20px auto; /* Márgenes automáticos para centrar horizontalmente */
+        padding: 0 20px; /* Espaciado interno lateral */
+    }
+
+    /* Estilo de la sección de héroe */
+    .hero {
+        background-color: #f0e4d7; /* Color de fondo beige claro */
+        padding: 50px 20px; /* Espaciado interno */
+        text-align: center; /* Centra el texto */
+        border-radius: 8px; /* Bordes redondeados */
+    }
+
+    .hero h1 {
+        margin: 0; /* Elimina el margen del título */
+        font-size: 2.5em; /* Tamaño de fuente grande para el título */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Tamaño de fuente ligeramente grande para el párrafo */
+        margin-top: 10px; /* Margen superior */
+    }
+
+    /* Estilo de la sección de productos */
+    .products {
+        display: flex; /* Utiliza Flexbox para organizar productos */
+        flex-wrap: wrap; /* Permite que los productos se envuelvan en varias líneas */
+        gap: 20px; /* Espacio entre productos */
+        justify-content: center; /* Centra los productos horizontalmente */
+    }
+
+    /* Estilo de cada producto */
+    .product {
+        background-color: #fff; /* Color de fondo blanco para cada producto */
+        border: 1px solid #ddd; /* Borde gris claro */
+        border-radius: 8px; /* Bordes redondeados */
+        padding: 20px; /* Espaciado interno */
+        width: calc(33% - 40px); /* Ancho calculado para tres columnas de productos */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra leve para efecto de elevación */
+        text-align: center; /* Centra el texto del producto */
+    }
+
+    .product img {
+        max-width: 100%; /* Ancho máximo de la imagen */
+        height: auto; /* Mantiene la proporción de la imagen */
+        border-radius: 8px; /* Bordes redondeados para la imagen */
+    }
+
+    .product h3 {
+        margin: 10px 0; /* Margen vertical del título del producto */
+        font-size: 1.2em; /* Tamaño de fuente para el título */
+    }
+
+    .product p {
+        color: #666; /* Color de texto gris oscuro */
+        font-size: 1em; /* Tamaño de fuente estándar */
+    }
+
+    /* Estilo del pie de página */
+    footer {
+        background-color: #2c2c2c; /* Color de fondo negro oscuro */
+        color: #fff; /* Color del texto blanco */
+        text-align: center; /* Centra el texto */
+        padding: 1rem; /* Espaciado interno */
+        margin-top: auto; /* Ajusta el margen superior automáticamente para alinear al fondo */
+        width: 100%; /* Ancho completo */
+        position: relative; /* Posicionamiento relativo para el pie de página */
+    }
+
+    footer .redes-sociales a {
+        text-decoration: none; /* Elimina el subrayado de los enlaces de redes sociales */
+        color: white; /* Color de texto blanco */
+        margin: 0 10px; /* Margen lateral entre íconos de redes sociales */
+    }
+
+    /* Estilos para la página de Componentes Electrónicos */
+    .componentes-e {
+        display: flex; /* Utiliza Flexbox para organizar los elementos */
+        align-items: flex-start; /* Alineación superior para los productos y el texto */
+        gap: 20px; /* Espacio entre título/descripción y productos */
+        margin: 2rem 0; /* Márgenes verticales para separación */
+        padding: 1rem; /* Espaciado interno */
+        background-color: #f9f9f9; /* Color de fondo ligeramente gris */
+        border: 1px solid #ddd; /* Borde gris claro */
+        border-radius: 8px; /* Bordes redondeados */
+    }
+
+    .titulo-descripcion {
+        max-width: 40%; /* Ancho máximo para el contenedor del título y descripción */
+        text-align: left; /* Alineación del texto a la izquierda */
+    }
+
+    .titulo-descripcion h2 {
+        margin-bottom: 0.5rem; /* Margen inferior del título */
+        font-size: 1.8rem; /* Tamaño grande del título */
+        color: #2c2c2c; /* Color negro oscuro */
+    }
+
+    .titulo-descripcion p {
+        font-size: 1rem; /* Tamaño de fuente estándar para la descripción */
+        color: #555; /* Color del texto gris */
+    }
+
+    .productos-destacados {
+        display: flex; /* Utiliza Flexbox para alinear productos destacados */
+        gap: 20px; /* Espacio entre productos destacados */
+        flex-wrap: wrap; /* Permite que los productos se envuelvan */
+        margin-left: auto; /* Empuja el contenedor hacia el borde derecho */
+        justify-content: flex-start; /* Alinea productos a la izquierda dentro del contenedor */
+    }
+
+    .componente-e {
+        text-align: center; /* Centra el texto dentro del componente */
+        background-color: #fff; /* Color de fondo blanco */
+        padding: 1rem; /* Espaciado interno */
+        border: 1px solid #ddd; /* Borde gris claro */
+        border-radius: 8px; /* Bordes redondeados */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+        width: 150px; /* Ancho fijo del componente */
+        flex: 0 0 auto; /* Evita que el componente se estire */
+    }
+
+    .componente-e img {
+        width: 100px; /* Ancho fijo de la imagen */
+        height: auto; /* Mantiene la proporción de la imagen */
+        border-radius: 5px; /* Bordes redondeados */
+        margin-bottom: 1rem; /* Margen inferior de la imagen */
+    }
+
+    .componentes-vendidos {
+        margin-top: 3rem; /* Margen superior */
+        background-color: #fff; /* Color de fondo blanco */
+        border-radius: 8px; /* Bordes redondeados */
+        padding: 20px; /* Espaciado interno */
+    }
+
+    .componentes-vendidos h3 {
+        text-align: center; /* Centra el texto del título */
+        margin-bottom: 1.5rem; /* Margen inferior del título */
+        font-size: 1.8rem; /* Tamaño de fuente grande */
+        color: #2c2c2c; /* Color negro oscuro */
+        font-weight: bold; /* Texto en negrita */
+    }
+
+    /* Estilo de la tabla */
+    table {
+        width: 80%; /* Ancho de la tabla */
+        margin: 1.5rem auto; /* Márgenes automáticos para centrar */
+        border-collapse: separate; /* Bordes separados en lugar de colapsados */
+        background-color: #fff; /* Color de fondo blanco */
+        border: 2px solid #ddd; /* Borde gris claro */
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+        overflow: hidden; /* Evita que los bordes se desborden */
+    }
+
+    th, td {
+        padding: 12px; /* Espaciado interno en celdas */
+        text-align: center; /* Alineación del texto en el centro */
+        border-bottom: 1px solid #ddd; /* Borde inferior de las celdas */
+    }
+
+    th {
+        background-color: #f0e4d7; /* Color de fondo beige claro para los encabezados */
+        color: #2c2c2c; /* Color del texto negro oscuro */
+        font-weight: bold; /* Texto en negrita para los encabezados */
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9; /* Color de fondo gris claro para filas pares */
+    }
+
+    tr:hover {
+        background-color: #f1f1f1; /* Color de fondo gris más claro al pasar el ratón */
+    }
