@@ -44,7 +44,8 @@
 
     /* Estilo del contenedor principal */
     .container {
-        max-width: 1200px; /* Ancho máximo del contenedor */
+        max-width: 1900px;
+        max-height: 1080; /* Ancho máximo del contenedor */
         margin: 20px auto; /* Márgenes automáticos para centrar horizontalmente */
         padding: 0 20px; /* Espaciado interno lateral */
     }

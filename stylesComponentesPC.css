@@ -33,9 +33,10 @@ nav a:hover {
     text-decoration: underline;
 }
 .container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
+    max-width: 1900px;
+    max-height: 1080px;
+    margin: 0 auto;
+    padding: 15px;
 }
 .hero {
     background-color: #f0e4d7; /* Beige claro */
