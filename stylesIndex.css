@@ -33,9 +33,9 @@ header p {
 
 .site-title {
   font-size: 12; /* Tamaño grande para el título */
-  margin: 0;
+  margin: 0; /* Elimina el margen por defecto */
   float: left;
-  width: 80%; /* Elimina el margen por defecto */
+  width: 80%; 
 }
 
 .subtitle {
