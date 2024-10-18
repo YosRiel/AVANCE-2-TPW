@@ -1,110 +1,177 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* Estilos globales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
-/* Contenedor principal */
 .container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Cabecera */
+/* Estilos del encabezado */
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 10px;
+  color: #fff;
 }
 
 header h1 {
-    margin-bottom: 10px;
+  margin: 0;
 }
 
-/* Barra de navegación */
-nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: #555;
-    padding: 10px;
+header p {
+  margin: 0;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
+.site-title {
+  font-size: 2em; /* Tamaño grande para el título */
+  margin: 0; /* Elimina el margen por defecto */
 }
 
-nav a:hover {
-    background-color: #333;
+.subtitle {
+  font-size: 1em; /* Tamaño más pequeño para el subtítulo */
+  margin-top: 0.5em; /* Espacio entre el título y el subtítulo */
+  color: #666; /* Color más suave para el subtítulo */
 }
 
-/* Sección principal */
-.main {
-    flex: 1;
-    padding: 20px;
+/* Estilos del logo */
+.nav-logo img {
+  width: 80px;
 }
 
-.main h2 {
-    text-align: center;
-    margin-bottom: 20px;
+/* Estilos de los botones de navegación */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 
-/* Layout de Grid para mostrar productos */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #333;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: 2px solid #ccc; /* Marco alrededor de los botones */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-.product {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.btn:hover {
+  background-color: #555;
+  border-color: #999;
 }
 
-.product img {
-    max-width: 100%;
-    height: auto;
+/* Estilos del contenido principal */
+.main .content {
+  text-align: center;
 }
 
-.product h3 {
-    margin: 15px 0;
+.main .content h2 {
+  margin-bottom: 20px;
 }
 
-.product p {
-    color: #666;
+.main .content p {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-.product button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
+/* Estilos del carrusel */
+.carousel-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: 50px 0;
 }
 
-.product button:hover {
-    background-color: #0056b3;
+.carousel {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
 }
 
-/* Footer */
+.carousel-item {
+  flex: 0 0 33.33%;
+  text-align: center;
+  padding: 10px;
+}
+
+.carousel-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Animación del carrusel */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
+
+/* Estilos del pie de página */
 footer {
-    background-color: #333;
-    color: white;
+  text-align: center;
+  margin-top: 50px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+footer .redes-sociales a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer .redes-sociales a:hover {
+  color: #ccc;
+}
+
+/* Estilos adicionales para el encabezado con tagline */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permite que el contenido se ajuste cuando sea necesario */
+  background-color: #333;
+  padding: 10px;
+  color: #fff;
+}
+
+.header-container h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.header-container .tagline {
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
     text-align: center;
-    padding: 10px;
+  }
+
+  .header-container h1 {
+    margin-bottom: 10px;
+  }
+
+  .header-container .tagline {
+    font-size: 1em;
+    margin-top: 10px;
+  }
 }
