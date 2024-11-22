@@ -4,20 +4,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Componente PC</title>
+  <title>ELECTROMUNDO</title>
   <link rel="stylesheet" href="stylesComponentesPC.css">
   <script type="module" src="script.js" defer></script>
 </head>
 <body>
-  <nav>
+  <!-- Cabecera con logo, barra de búsqueda y carrito -->
+  <header class="header-aligned">
     <a href="Index.html" class="nav-logo">
-        <img src="IMG/logo.png" alt="Inicio">
+        <img src="IMG/logo.png" alt="Logo Tienda">
     </a>
-    <div class="nav-links">
-        <a href="Perifericos.html">Periféricos</a>
-        <a href="Componentes de PC.html">Componentes de PC</a>
-        <a href="Componentes electronicos.html">Componentes Electrónicos</a>
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar...">
+        <button type="button">Buscar</button>
     </div>
+    <a href="Facturación.html" class="cart-icon">
+        <img src="IMG/CARRITO.png" alt="Carrito">
+    </a>
+</header>
+
+<!-- Botón Categorías centrado con menú desplegable -->
+<div class="btn-container">
+    <div class="dropdown">
+        <button class="dropbtn">CATEGORIAS</button>
+        <div class="dropdown-content">
+            <a href="Perifericos.html">Periféricos</a>
+            <a href="Componentes de PC.html">Componentes de PC</a>
+            <a href="Componentes electronicos.html">Componentes Electrónicos</a>
+        </div>
+    </div>
+</div>
 </nav>
 
 <h2><center>Estos son los componentes con los que contamos</center></h2>
@@ -43,6 +59,7 @@
     <div class="block">Fuente de Poder</div>
 </div>
 
+<!-- Footer -->
 <footer>
     <p>&copy; 2024 Tienda de Electrónica. Todos los derechos reservados.</p>
 </footer>

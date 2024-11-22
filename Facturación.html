@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facturación - Componentes Electrónicos</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>ELECTROMUNDO</title>
+    <link rel="stylesheet" href="stylesFacturacion.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@500&display=swap" rel="stylesheet">
@@ -12,6 +12,30 @@
 </head>
 <body>
 
+    <!-- Cabecera con logo, barra de búsqueda y carrito -->
+    <header class="header-aligned">
+        <a href="Index.html" class="nav-logo">
+            <img src="IMG/logo.png" alt="Logo Tienda">
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+        </div>
+        <a href="Facturación.html" class="cart-icon">
+            <img src="IMG/CARRITO.png" alt="Carrito">
+        </a>
+    </header>
+
+    <!-- Botón Categorías centrado con menú desplegable -->
+    <div class="btn-container">
+        <div class="dropdown">
+            <button class="dropbtn">CATEGORIAS</button>
+            <div class="dropdown-content">
+                <a href="Perifericos.html">Periféricos</a>
+                <a href="Componentes de PC.html">Componentes de PC</a>
+                <a href="Componentes electronicos.html">Componentes Electrónicos</a>
+            </div>
+        </div>
+    </div>
 <!-- Cronómetro -->
 <div class="cronometro-wrapper">
     <div id="cronometro">00:00:00</div>
@@ -65,8 +89,12 @@
         </tbody>
     </table>
 </div>
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Tienda de Electrónica. Todos los derechos reservados.</p>
+</footer>
 
-<script src="script.js"></script>
+<script src="scriptFacturacion.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
