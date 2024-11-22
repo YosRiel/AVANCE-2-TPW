@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECTROMUNDO</title>
+    <link rel="stylesheet" href="stylesGestionPedidos.css">
+</head>
+<body>
+    <!-- Cabecera con logo, barra de búsqueda y carrito -->
+    <header class="header-aligned">
+        <a href="Index.html" class="nav-logo">
+            <img src="IMG/logo.png" alt="Logo Tienda">
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <button type="button">Buscar</button>
+        </div>
+        <a href="Facturación.html" class="cart-icon">
+            <img src="IMG/CARRITO.png" alt="Carrito">
+        </a>
+    </header>
+
+    <!-- Botón Categorías centrado con menú desplegable -->
+    <div class="btn-container">
+        <div class="dropdown">
+            <button class="dropbtn">CATEGORIAS</button>
+            <div class="dropdown-content">
+                <a href="Perifericos.html">Periféricos</a>
+                <a href="Componentes de PC.html">Componentes de PC</a>
+                <a href="Componentes electronicos.html">Componentes Electrónicos</a>
+            </div>
+        </div>
+    </div>
+    <h1>Gestión de Pedidos</h1>
+    <h2>Tareas pendientes:</h2>
+    <div class="task-input">
+        <input type="text" id="new-task" placeholder="Nueva tarea...">
+        <button onclick="addTask()">Agregar</button>
+    </div>
+    <ul id="task-list">
+        <li>
+            Confirmar pagos pendientes: Revisión de pedidos con pago pendiente.
+            <div class="task-buttons">
+                <button onclick="checkTask(this)">✔</button>
+                <button onclick="uncheckTask(this)">✖</button>
+                <button onclick="deleteTask(this)">🗑</button>
+            </div>
+        </li>
+        <li>
+            Preparación de envíos: Asegurarse de que los productos estén listos para su envío.
+            <div class="task-buttons">
+                <button onclick="checkTask(this)">✔</button>
+                <button onclick="uncheckTask(this)">✖</button>
+                <button onclick="deleteTask(this)">🗑</button>
+            </div>
+        </li>
+        <li>
+            Verificación de stock: Comprobar el inventario antes de procesar un pedido.
+            <div class="task-buttons">
+                <button onclick="checkTask(this)">✔</button>
+                <button onclick="uncheckTask(this)">✖</button>
+                <button onclick="deleteTask(this)">🗑</button>
+            </div>
+        </li>
+        <li>
+            Impresión de etiquetas de envío: Generar y preparar etiquetas para el envío.
+            <div class="task-buttons">
+                <button onclick="checkTask(this)">✔</button>
+                <button onclick="uncheckTask(this)">✖</button>
+                <button onclick="deleteTask(this)">🗑</button>
+            </div>
+        </li>
+        <li>
+            Empaque y embalaje: Asegurar que los productos se empaqueten correctamente antes de enviarlos.
+            <div class="task-buttons">
+                <button onclick="checkTask(this)">✔</button>
+                <button onclick="uncheckTask(this)">✖</button>
+                <button onclick="deleteTask(this)">🗑</button>
+            </div>
+        </li>
+        <li>
+            Gestión de devoluciones: Seguir el proceso de devoluciones y gestionar reembolsos.
+            <div class="task-buttons">
+                <button onclick="checkTask(this)">✔</button>
+                <button onclick="uncheckTask(this)">✖</button>
+                <button onclick="deleteTask(this)">🗑</button>
+            </div>
+        </li>
+    </ul>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tienda de Electrónica. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
