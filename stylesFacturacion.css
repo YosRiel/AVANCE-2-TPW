@@ -1,127 +1,104 @@
-/* Estilos globales */
+/* Estilos generales */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: 20px;
+  padding: 20px;
   background-color: #f4f4f4;
 }
 
+h1 {
+  text-align: center;
+}
+
 .container {
-  max-width: 1900px;
-  max-height: 1080px;
-  margin: 0 auto;
-  padding: 15px;
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos del encabezado */
-header {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #333;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input, select {
+  width: 97%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th, td {
   padding: 10px;
-  color: #fff;
+  border: 1px solid #ccc;
+  text-align: left;
 }
 
-header h1, header h2 {
-  color: #fff;
-  margin: 0;
+th {
+  background-color: #f8f8f8;
 }
 
-header p {
-  margin: 0;
-}
-
-.site-title {
-  font-size: 2em; /* Tamaño grande para el título */
-  margin: 0; /* Elimina el margen por defecto */
-}
-
-.subtitle {
-  font-size: 1em; /* Tamaño más pequeño para el subtítulo */
-  margin-top: 0.5em; /* Espacio entre el título y el subtítulo */
-  color: #666; /* Color más suave para el subtítulo */
-}
-
-/* Estilos del logo */
-.nav-logo img {
-  width: 80px;
-}
-
-/* Estilos de los botones de navegación */
-.btn-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.btn {
-  text-decoration: none;
-  color: #fff;
-  background-color: #333;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border: 2px solid #ccc; /* Marco alrededor de los botones */
-  border-radius: 8px; /* Bordes redondeados */
-  transition: background-color 0.3s, border-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #555;
-  border-color: #999;
-}
-
-/* Estilos de la barra de navegación */
-.btn-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.btn {
-  text-decoration: none;
-  color: #fff;
-  background-color: #333;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border: 2px solid #ccc; /* Marco alrededor de los botones */
-  border-radius: 8px; /* Bordes redondeados */
-  transition: background-color 0.3s, border-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #555;
-  border-color: #999;
-}
-
-/* Estilos del contenido principal */
-h1, h2 {
-  color: #333; /* Color de los encabezados */
-  display:flex;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-form {
-  margin-bottom: 20px;
-}
-
-/* Estilos del pie de página */
-footer {
-  text-align: center;
-  margin-top: 50px;
+/* Estilos del cronómetro */
+.cronometro-wrapper {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 8px;
   padding: 10px;
-  background-color: #333;
-  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Asegura que esté por encima del resto del contenido */
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
-/* Media query para pantallas pequeñas */
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    text-align: center;
-  }
+#cronometro {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.contenedor-botones .boton {
+  margin: 2px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.contenedor-botones .boton:hover {
+  background: #0056b3;
 }
