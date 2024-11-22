@@ -8,24 +8,30 @@
 </head>
 <body>
     <div class="container">
-        <nav>
-            <!-- Cabecera -->
-            <header>
-                <a href="Index.html" class="nav-logo">
-                    <img src="IMG/logo.png" alt="Index.html">
-                </a>
-                <h1>Electromundo</h1>
-                <h2>¡Encuentra lo mejor en periféricos, componentes electrónicos y más!</h2>
-            </header>
-        </nav>
+        <!-- Cabecera con logo, barra de búsqueda y carrito -->
+        <header class="header-aligned">
+            <a href="Index.html" class="nav-logo">
+                <img src="IMG/logo.png" alt="Logo Tienda">
+            </a>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button type="button">Buscar</button>
+            </div>
+            <a href="Factuación.html" class="cart-icon">
+                <img src="IMG/CARRITO.png" alt="Carrito">
+            </a>
+        </header>
 
-        <!-- Botones de navegación -->
+        <!-- Botón Categorías centrado con menú desplegable -->
         <div class="btn-container">
-            <a href="Index.html" class="btn">Inicio</a>
-            <a href="Perifericos.html" class="btn">Periféricos</a>
-            <a href="Componentes de PC.html" class="btn">Componentes de PC</a>
-            <a href="Componentes electronicos.html" class="btn">Componentes Electrónicos</a>
-            <a href="Factuación.html" class="btn">Carrito</a>
+            <div class="dropdown">
+                <button class="dropbtn">CATEGORIAS</button>
+                <div class="dropdown-content">
+                    <a href="Perifericos.html">Periféricos</a>
+                    <a href="Componentes de PC.html">Componentes de PC</a>
+                    <a href="Componentes electronicos.html">Componentes Electrónicos</a>
+                </div>
+            </div>
         </div>
 
         <!-- Sección principal -->

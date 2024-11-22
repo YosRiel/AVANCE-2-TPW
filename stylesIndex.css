@@ -4,102 +4,181 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  min-width: 801px;
 }
 
 .container {
   max-width: 1900px;
-  max-height: 1080px;
   margin: 0 auto;
   padding: 15px;
 }
 
-/* Estilos del encabezado */
-header {
+/* Encabezado alineado */
+.header-aligned {
   display: flex;
-  text-align: center;
   align-items: center;
   justify-content: space-between;
   background-color: #333;
-  padding:15px;
+  padding: 15px;
   color: #fff;
+  position: relative;
 }
 
-header h1 {
-  margin: 0;
+.header-aligned .nav-logo img {
+  width: 250px;
+  margin-left: 150px;
+  margin-right: 20px;
 }
 
-header p {
-  margin: 0;
+.header-aligned .cart-icon img {
+  height: 80px;
+  margin-right: 150px;
+  margin-left: 20px;
 }
 
-.site-title {
-  font-size: 12; /* Tamaño grande para el título */
-  margin: 0; /* Elimina el margen por defecto */
-  float: left;
-  width: 80%; 
+.header-aligned .cart-icon img, 
+.header-aligned .nav-logo img {
+  transition: transform 0.3s;
+  cursor: pointer;
 }
 
-.subtitle {
-  font-size: 12; /* Tamaño más pequeño para el subtítulo */
-  margin-top: 2; /* Espacio entre el título y el subtítulo */
-  color: #666;
-  padding: 20px;
-  float: left;
-  width: 20%; /* Color más suave para el subtítulo */
+.header-aligned .nav-logo img:hover,
+.header-aligned .cart-icon img:hover {
+  transform: scale(1.1);
 }
 
-@media screen and (max-width: 800px) {
-  .site-title, .subtitle {
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+.header-aligned .search-bar {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-aligned .search-bar input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.header-aligned .search-bar button {
+  padding: 8px 16px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header-aligned .search-bar button:hover {
+  background-color: #555;
+}
+
+/* Botón Categorías con menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dropdown .dropbtn {
+  background-color: #333;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #444;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 16px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  border-bottom: 1px solid #555;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0px);
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #555;
+}
+
+/* Responsividad */
+@media screen and (max-width: 1200px) {
+  .header-aligned .nav-logo img {
+    margin-left: 50px;
+  }
+
+  .header-aligned .cart-icon img {
+    margin-right: 50px;
   }
 }
 
-/* Estilos del logo */
-.nav-logo img {
-  width: 80px;
-}
+@media screen and (max-width: 800px) {
+  .header-aligned {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-/* Estilos de los botones de navegación */
-.btn-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
+  .search-bar {
+    margin: 10px 0;
+  }
 
-.btn {
-  text-decoration: none;
-  color: #fff;
-  background-color: #333;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border: 2px solid #ccc; /* Marco alrededor de los botones */
-  border-radius: 8px; /* Bordes redondeados */
-  transition: background-color 0.3s, border-color 0.3s;
-}
+  .btn-container {
+    display: flex;
+    justify-content: center;
+  }
 
-.btn:hover {
-  background-color: #555;
-  border-color: #999;
-}
+  .cart-icon img,
+  .nav-logo img {
+    width: 60px;
+    height: 60px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-.header-container {
-  display: flex;
-  align-items: centerleft;
-  justify-content: space-between;
-  background-color: #333;
-  padding: 10px;
-  color: #fff;
-}
+  .dropdown .dropbtn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
 
-.header-container h1 {
-  margin: 0;
-  font-size: 1.8em;
-}
-
-.header-container .tagline {
-  font-size: 1.2em;
-  text-align: right;
-  margin-top: 1px;
+  .dropdown-content {
+    width: 90%;
+  }
 }
 
 /* Estilos del contenido principal */
@@ -108,6 +187,7 @@ header p {
 }
 
 .main .content h2 {
+  margin-top: 1%;
   margin-bottom: 1%;
 }
 
@@ -122,12 +202,11 @@ header p {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  margin: 50px 0;
 }
 
 .carousel {
   display: flex;
-  width: 300%;
+  width: 100%;
   animation: slide 50s infinite;
 }
 
@@ -167,7 +246,3 @@ footer .redes-sociales a {
 footer .redes-sociales a:hover {
   color: #ccc;
 }
-
-/* Estilos adicionales para el encabezado con tagline */
-
-
