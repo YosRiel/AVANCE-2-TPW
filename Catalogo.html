@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECTROMUNDO</title>
+    <link rel="stylesheet" href="stylesCatalogo.css">
+</head>
+<body>
+    <!-- Cabecera con logo, barra de búsqueda y carrito -->
+    <header class="header-aligned">
+        <a href="Index.html" class="nav-logo">
+            <img src="IMG/logo.png" alt="Logo Tienda">
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <button type="button">Buscar</button>
+        </div>
+        <a href="Facturación.html" class="cart-icon">
+            <img src="IMG/CARRITO.png" alt="Carrito">
+        </a>
+    </header>
+
+    <!-- Botón Categorías centrado con menú desplegable -->
+    <div class="btn-container">
+        <div class="dropdown">
+            <button class="dropbtn">CATEGORIAS</button>
+            <div class="dropdown-content">
+                <a href="Catalogo.html">Catálogo</a>
+                <a href="Perifericos.html">Periféricos</a>
+                <a href="Componentes de PC.html">Componentes de PC</a>
+                <a href="Componentes electronicos.html">Componentes Electrónicos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cuerpo -->
+    <div class="container">
+        <!-- Filtro de preferencias -->
+        <aside class="filter">
+            <h3>Filtrar por:</h3>
+            <form>
+                <label for="category">Categoría:</label>
+                <select id="category" name="category">
+                    <option value="all">Todos</option>
+                    <option value="keyboards">Teclados</option>
+                    <option value="mice">Ratones</option>
+                    <option value="monitors">Monitores</option>
+                    <option value="headsets">Audífonos</option>
+                    <option value="webcams">Webcams</option>
+                    <option value="microphones">Micrófonos</option>
+                    <option value="speakers">Parlantes</option>
+                    <option value="controllers">Controles</option>
+                    <option value="cables">Cables</option>
+                    <option value="adapters">Adaptadores</option>
+                </select>
+                <br>
+                <label for="price">Precio:</label>
+                <input type="range" id="price" name="price" min="0" max="900">
+                <br>
+                <button type="submit">Aplicar</button>
+            </form>
+        </aside>
+
+        <!-- Catálogo de productos -->
+        <section class="product-catalog">
+            <div class="product">
+                <img src="IMG/keyboard.jpg" alt="Teclado">
+                <h4>Teclado Mecánico</h4>
+                <p>S/. 150.00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="IMG/mouse.jpg" alt="Ratón">
+                <h4>Ratón Inalámbrico</h4>
+                <p>S/. 80.00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="IMG/monitor.jpg" alt="Monitor">
+                <h4>Monitor LED 24"</h4>
+                <p>S/. 600.00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="IMG/keyboard2.jpg" alt="Teclado">
+                <h4>Teclado Gamer</h4>
+                <p>S/. 200.00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="IMG/mouse2.jpg" alt="Ratón">
+                <h4>Ratón Gamer</h4>
+                <p>S/. 120.00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="IMG/monitor2.jpg" alt="Monitor">
+                <h4>Monitor Curvo 27"</h4>
+                <p>S/. 800.00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="IMG/keyboard3.jpg" alt="Teclado">
+                <h4>Teclado Compacto</h4>
+                <p>S/. 100.00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="IMG/mouse3.jpg" alt="Ratón">
+                <h4>Ratón Óptico</h4>
+                <p>S/. 60.00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="IMG/monitor3.jpg" alt="Monitor">
+                <h4>Monitor 4K 32"</h4>
+                <p>S/. 1200.00</p>
+                <button>Comprar</button>
+            </div>
+        </section>
+        
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tienda de Electrónica. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scriptsCatalogo.js"></script>
+</body>
+</html>
