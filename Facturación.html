@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facturación - Componentes Electrónicos</title>
-    <link rel="stylesheet" href="stylesFacturacion.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <body>
-    <nav>
-        <!-- Cabecera -->
-        <header>
-            <a href="Index.html" class="nav-logo">
-                <img src="IMG/logo.png" alt="Index.html">
-            </a>
-            <h1>Electromundo</h1>
-            <h2>¡Encuentra lo mejor en periféricos, componentes electrónicos y más!</h2>
-        </header>
-    </nav>
 
-    <!-- Botones de navegación -->
-    <div class="btn-container">
-        <a href="Index.html" class="btn">Inicio</a>
-        <a href="Perifericos.html" class="btn">Periféricos</a>
-        <a href="Componentes de PC.html" class="btn">Componentes de PC</a>
-        <a href="Componentes electronicos.html" class="btn">Componentes Electrónicos</a>
-        <a href="Factuación.html" class="btn">Carrito</a>
+<!-- Cronómetro -->
+<div class="cronometro-wrapper">
+    <div id="cronometro">00:00:00</div>
+    <div class="contenedor-botones">
+        <button id="boton-inicio-pausa" class="boton iniciar">
+            <i class="bi bi-play-fill"></i>
+        </button>
+        <button id="boton-pausar" class="boton">
+            <i class="bi bi-pause-fill"></i>
+        </button>
+        <button id="boton-reiniciar" class="boton">
+            <i class="bi bi-arrow-counterclockwise"></i>
+        </button>
     </div>
+</div>
 
-<div class="main">
-    <h1><center>Componentes Electrónicos</center></h1>
-    <img src="IMG/factura.jpg" alt="Componentes Electrónicos">
+<!-- Contenido principal -->
+<div class="container">
+    <h1>Componentes Electrónicos</h1>
+    <img src="img/factura.jpg" alt="Componentes Electrónicos">
     
     <h2>Formulario de Facturación</h2>
     <form id="facturaForm">
@@ -64,12 +66,7 @@
     </table>
 </div>
 
-<!-- Footer -->
-<footer>
-    <p>&copy; 2024 Tienda de Electrónica. Todos los derechos reservados.</p>
-</footer>
-</div>
-
-<script src="scriptFacturacion.js"></script>
+<script src="script.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
