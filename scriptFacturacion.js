@@ -4,8 +4,12 @@ document.getElementById('facturaForm').addEventListener('submit', function(event
 
   // Obtiene los valores del formulario
   const nombre = document.getElementById('nombre').value;
-  const producto = document.getElementById('producto').value;
+  const productoSeleccionado = document.getElementById('producto').value;
+  const nuevoProducto = document.getElementById('nuevoProducto').value.trim();
   const cantidad = document.getElementById('cantidad').value;
+
+  // Usa el nuevo producto si se escribió uno
+  const producto = productoSeleccionado === 'otro' && nuevoProducto ? nuevoProducto : productoSeleccionado;
 
   // Crea una nueva fila en la tabla
   const tabla = document.getElementById('facturaTable').getElementsByTagName('tbody')[0];
@@ -22,6 +26,20 @@ document.getElementById('facturaForm').addEventListener('submit', function(event
 
   // Limpia el formulario
   this.reset();
+  document.getElementById('nuevoProducto').style.display = 'none'; // Oculta el campo "nuevoProducto" si estaba visible
+});
+
+// Manejar la selección de "Otro" en el campo producto
+document.getElementById('producto').addEventListener('change', function () {
+  const nuevoProductoInput = document.getElementById('nuevoProducto');
+  if (this.value === 'otro') {
+    nuevoProductoInput.style.display = 'inline'; // Muestra el campo de texto
+    nuevoProductoInput.required = true; // Hace obligatorio el campo si se selecciona "Otro"
+  } else {
+    nuevoProductoInput.style.display = 'none'; // Oculta el campo de texto
+    nuevoProductoInput.required = false; // Lo hace opcional de nuevo
+    nuevoProductoInput.value = ''; // Limpia el campo si no está en uso
+  }
 });
 
 // Funcionalidad del cronómetro
@@ -61,13 +79,10 @@ function reiniciarCronometro() {
 
 // Función para deshabilitar los campos de texto
 function deshabilitarCampos() {
-  // Selecciona todos los campos de texto y botones
   const camposTexto = document.querySelectorAll('#facturaForm input, #facturaForm select, #facturaForm button');
-  
-  // Deshabilita los campos
   camposTexto.forEach(campo => campo.disabled = true);
 
-  // Opcional: Agrega un mensaje de "Tiempo Expirado"
+  // Agrega un mensaje de "Tiempo Expirado"
   mensajeExpirado = document.createElement('p');
   mensajeExpirado.textContent = "El tiempo ha expirado. Ya no puedes hacer cambios.";
   mensajeExpirado.style.color = "red";
@@ -76,13 +91,9 @@ function deshabilitarCampos() {
 
 // Función para habilitar los campos de texto
 function habilitarCampos() {
-  // Selecciona todos los campos de texto y botones
   const camposTexto = document.querySelectorAll('#facturaForm input, #facturaForm select, #facturaForm button');
-  
-  // Habilita los campos
   camposTexto.forEach(campo => campo.disabled = false);
 
-  // Elimina el mensaje de "Tiempo Expirado" si existe
   if (mensajeExpirado) {
     mensajeExpirado.remove();
   }
