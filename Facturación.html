@@ -56,23 +56,26 @@
 <!-- Contenido principal -->
 <div class="container">
     <h1>Componentes Electrónicos</h1>
-    <img src="img/factura.jpg" alt="Componentes Electrónicos">
+    <img src="IMG/factura.jpg" alt="Componentes Electrónicos">
     
     <h2>Formulario de Facturación</h2>
     <form id="facturaForm">
         <label for="nombre">Nombre del Cliente:</label>
         <input type="text" id="nombre" name="nombre" required>
-
+    
         <label for="producto">Producto:</label>
         <select id="producto" name="producto" required>
             <option value="Resistor">Resistor</option>
             <option value="Capacitor">Capacitor</option>
             <option value="Transistor">Transistor</option>
+            <option value="otro">Otro</option>
         </select>
-
+    
+        <input type="text" id="nuevoProducto" name="nuevoProducto" placeholder="Escribe el nuevo producto" style="display: none;">
+    
         <label for="cantidad">Cantidad:</label>
         <input type="number" id="cantidad" name="cantidad" required min="1">
-
+    
         <button type="submit">Enviar Factura</button>
     </form>
 
