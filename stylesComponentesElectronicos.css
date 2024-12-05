@@ -353,4 +353,13 @@ footer {
   footer .redes-sociales a:hover {
     color: #ccc;
   }
-  
+
+.productos-destacados .componente-e img {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.productos-destacados .componente-e img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
