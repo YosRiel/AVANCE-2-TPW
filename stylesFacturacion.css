@@ -247,16 +247,16 @@ th {
 /* Estilos del cronómetro */
 .cronometro-wrapper {
   position: fixed;
-  top: 182px;
-  right: 250px;
-  background: rgba(0, 0, 0, 0.8);
+  top: 50%;
+  right: 10px; /* Ajusta la distancia desde el borde derecho */
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
   color: white;
   border-radius: 8px;
-  padding: 50px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  z-index: 1000; /* Asegura que esté por encima del resto del contenido */
-  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
 }
 
 #cronometro {
