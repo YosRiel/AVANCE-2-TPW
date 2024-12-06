@@ -129,56 +129,7 @@ img {
 .dropdown {
   display: none;
 }
-.catalog{
-  display: none;
-}
 
-/* Estilos del contenido principal */
-.main .content {
-  text-align: center;
-}
-
-.main .content h2 {
-  margin-top: 1%;
-  margin-bottom: 1%;
-}
-
-.main .content p {
-  font-size: 18px;
-  line-height: 1;
-}
-
-/* Estilos del carrusel */
-.carousel-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.carousel {
-  display: flex;
-  width: 100%;
-  animation: slide 50s infinite;
-}
-
-.carousel-item {
-  flex: 0 0 20.33%;
-  text-align: center;
-  padding: 10px;
-}
-
-.carousel-item img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-/* Animación del carrusel */
-@keyframes slide {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(-95%); }
-  100% { transform: translateX(0); }
-}
 /* Estilos del pie de página */
 footer {
   text-align: center;
@@ -273,8 +224,5 @@ footer .redes-sociales a:hover {
   }
   .main .content{
     display: none;
-  }
-  .catalog {
-    display: flex;
   }
 }

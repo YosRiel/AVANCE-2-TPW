@@ -1,32 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Citas Aleatorias</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- CSS Personalizado -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECTROMUNDO</title>
+    <link rel="stylesheet" href="stylesIndex.css">
 </head>
 <body>
+    <div class="container">
+        <!-- Cabecera con logo, barra de búsqueda y carrito -->
+        <header class="header-aligned">
+            <a href="Index.html" class="nav-logo">
+                <img src="IMG/logo.png" alt="Logo Tienda">
+            </a>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button type="button">Buscar</button>
+            </div>
+            <a href="Facturación.html" class="cart-icon">
+                <img src="IMG/CARRITO.png" alt="Carrito">
+            </a>
+            <!-- Botón Categorías centrado con menú desplegable -->
+            <div class="btn-container">
+                <div class="dropdown">
+                    <button class="dropbtn">CATEGORIAS</button>
+                    <div class="dropdown-content">
+                        <a href="Perifericos.html">Periféricos</a>
+                        <a href="Componentes de PC.html">Componentes de PC</a>
+                        <a href="Componentes electronicos.html">Componentes Electrónicos</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="navbar">
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="Perifericos.html">Perifericos</a>
+                    </li>
+                    <li>
+                        <a href="Componentes de PC.html">Componentes de PC</a>
+                    </li>
+                    <li>
+                        <a href="Componentes electronicos.html">Componentes Electronios</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-  <div class="container mt-5">
-    <div class="card text-center">
-      <div class="card-body">
-        <h5 class="card-title">Cita Aleatoria</h5>
-        <p class="card-text" id="quote">Haz clic en el botón para obtener una cita.</p>
-        <button class="btn btn-primary" id="new-quote">Nueva Cita</button>
-      </div>
-      <div class="card-footer text-muted">
-        Citas Aleatorias
-      </div>
+        
+
+        <!-- Sección principal -->
+        <div class="main">
+            <div class="content">
+                <h2>Descubre Nuestros Productos Destacados</h2>
+                <p>Tenemos una amplia variedad de productos de alta calidad. Echa un vistazo a los que tenemos a continuación.</p>
+            </div>
+
+            <!-- Carrusel de productos -->
+            <div class="product-grid">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="IMG/i3 14100.png" alt="Producto 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="IMG/i5 14400.png" alt="Producto 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="IMG/i7 14700.png" alt="Producto 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="IMG/H610M 1700 ASUS.png" alt="Producto 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="IMG/H610M 1700 MSI.png" alt="Producto 5">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="IMG/5 8400F.png" alt="Producto 6">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="IMG/7 8700F.png" alt="Producto 7">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="IMG/A620M AM5 ASUS.png" alt="Producto 8">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="IMG/A620M AM5 MSI.png" alt="Producto 9">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Catálogo de productos -->
+        <div class="catalog">
+            <div class="product-list">
+            <object type="text/html" data="Catalogo.html" height="700px" width="801px"></object>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Tienda de Electrónica. Todos los derechos reservados.</p>
+        </footer>
     </div>
-  </div>
 
-  <!-- Bootstrap JS y dependencias -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- JavaScript Personalizado -->
-  <script src="script.js"></script>
+    <script src="scriptsIndex.js"></script>
 </body>
 </html>
