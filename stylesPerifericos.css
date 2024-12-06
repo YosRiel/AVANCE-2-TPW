@@ -12,6 +12,19 @@ body {
   min-width: 801px;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 134px;
+}
+
+.hero {
+  background-color: #f0e4d7; /* Beige claro */
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
 a {
   text-decoration: none;
   color: #f4f4f4;
@@ -129,6 +142,7 @@ img {
 .dropdown {
   display: none;
 }
+
 
 /* Estilos del pie de página */
 footer {
@@ -248,3 +262,94 @@ th, td {
 tr:nth-child(odd) {
   background-color: #f9f9f9;
 }   
+
+/* Transiciones */
+#div1 {
+  width: 100px;
+  height: auto; /* Ajusta la altura automáticamente en función de la imagen */
+  display: inline-block;
+  position: relative;
+  background-color: red;
+  transition: width 2s;
+  overflow: hidden;
+  vertical-align: top; /* Alineación vertical con div2 */
+}
+
+#div1:hover {
+  width: 300px;
+}
+
+#infoBox {
+  position: absolute;
+  top: 0;
+  left: -200px; 
+  width: 180px;
+  background-color: #f1f1f1;
+  color: black;
+  padding: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+#div1:hover #infoBox {
+  max-height: 300px; 
+}
+
+/* Animación */
+@keyframes cambios {
+  0% {
+    background-color: red;
+    width: 256px;
+  }
+  25% {
+    background-color: yellow;
+    width: 128px;
+    transform: translate(0, 100px);
+  }
+  50% {
+    background-color: blue;
+    width: 256px;
+    transform: translate(128px, 128px);
+  }
+  75% {
+    background-color: blue;
+    width: 384px;
+    transform: translate(128px, 0);
+  }
+  100% {
+    background-color: red;
+    width: 256px;
+    transform: translate(0, 0);
+  }
+}
+
+#div2 {
+  animation-name: cambios;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  width: 256px;
+  height: 256px;
+  display: inline-block;
+  padding: 10px;
+  vertical-align: top; 
+  margin-left: 20px; 
+  overflow: hidden; 
+}
+
+#div2 img {
+  width: 100%; 
+  height: 100%; 
+}
+
+/* Transformaciones */
+#div3 {
+  transform: rotate(-15deg); /* Rotación 2D de -5° */
+  display: inline-block;
+} 
+#div4 {
+  transform: rotateY(150deg); /* Rotación 3D de 150° en el eje Y */
+}
+
+
+
