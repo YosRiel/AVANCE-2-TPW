@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -11,26 +10,22 @@ body {
   background-color: #f4f4f4;
   min-width: 801px;
 }
-
 a {
   text-decoration: none;
   color: #f4f4f4;
 }
-
 ul {
   list-style: none;
 }
 img {
   max-width: 100%;
 }
-
 .container {
   max-width: 90%;
   min-width: 801px;
   margin: 0 auto;
   padding: 10px;;
 }
-
 /* Encabezado alineado */
 .header-aligned {
   display: flex;
@@ -39,28 +34,23 @@ img {
   background-color: #333;
   padding: 20px;
 }
-
 .header-aligned .nav-logo img{
   width: 250px;
   height:auto;
 }
-
 .header-aligned .cart-icon img {
   width: 85px;
   height: auto;
 }
-
 .header-aligned .cart-icon img, 
 .header-aligned .nav-logo img {
   transition: transform 0.3s;
   cursor: pointer;
 }
-
 .header-aligned .nav-logo img:hover,
 .header-aligned .cart-icon img:hover {
   transform: scale(1.1);
 }
-
 .header-aligned .search-bar {
   display: flex;
   justify-content: space-between;
@@ -69,14 +59,12 @@ img {
   margin: 0 20px;
   gap: 10px;
 }
-
 .header-aligned .search-bar input {
   width: 100%;
   padding: 10px;
   border: 1px solid #f4f4f4;
   border-radius: 10px;
 }
-
 .header-aligned .search-bar button{
   background-color: #333;
   color: #f4f4f4;
@@ -88,29 +76,24 @@ img {
   cursor: pointer;
   transition: 0.5s;
 }
-
 .header-aligned .search-bar button:hover {
   color: gray;
   border-color: gray 1px solid;
 }
-
 .navbar {
   background-color: #333;
   padding: 20px;
   
 }
-
 .navbar .container {
   display: flex;
   justify-content: space-between;
 }
-
 .navbar .nav-links ul {
   display: flex;
   justify-content: center;
   text-align: center;
 }
-
 .navbar ul li a {
   padding: 10px 60px;
   border: transparent 1px solid;
@@ -118,36 +101,30 @@ img {
   font-weight: 600;
   transition: 0.5s;
 }
-
 .navbar ul li a:hover {
   color: gray;
   border: gray 1px solid;
   border-radius: 10px;
   cursor: pointer;
 }
-
 .dropdown {
   display: none;
 }
 .catalog{
   display: none;
 }
-
 /* Estilos del contenido principal */
 .main .content {
   text-align: center;
 }
-
 .main .content h2 {
   margin-top: 1%;
   margin-bottom: 1%;
 }
-
 .main .content p {
   font-size: 18px;
   line-height: 1;
 }
-
 /* Estilos del carrusel */
 .carousel-container {
   width: 100%;
@@ -155,24 +132,20 @@ img {
   justify-content: center;
   overflow: hidden;
 }
-
 .carousel {
   display: flex;
   width: 100%;
   animation: slide 50s infinite;
 }
-
 .carousel-item {
   flex: 0 0 20.33%;
   text-align: center;
   padding: 10px;
 }
-
 .carousel-item img {
   width: 100%;
   border-radius: 8px;
 }
-
 /* Animación del carrusel */
 @keyframes slide {
   0% { transform: translateX(0); }
@@ -187,17 +160,14 @@ footer {
   background-color: #333;
   color: #fff;
 }
-
 footer .redes-sociales a {
   color: #fff;
   text-decoration: none;
   margin: 0 5px;
 }
-
 footer .redes-sociales a:hover {
   color: #ccc;
 }
-
 @media (max-width: 800px) {
   .header-aligned .search-bar, .header-aligned .cart-icon{
     display: none;
@@ -236,14 +206,12 @@ footer .redes-sociales a:hover {
     border: gray 1px solid;
     border-radius: 10px;
   }
-
   .dropdown-content {
     display: none;
     transition: max-height 0.3s ease-out;
     overflow: hidden;
     flex-direction: column;
   }
-  
   .dropdown-content.show {
     display: flex;
     text-align: center;
